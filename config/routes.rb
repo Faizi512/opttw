@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root "pages#opt_out"
 
   post "/submit_data", to: "pages#submit_data"
+
+  get "/thank_you", to: "pages#thank_you"
 end

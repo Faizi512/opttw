@@ -7,11 +7,11 @@
     <p class="firstLine">Unsubscribe From SMS / Email Alerts </p>
 
     <p class="secondLine">Please use the form below to opt out of receiving sms alerts</p>
-    <form>
+    <form method="post" action="/submit_data">
 
-      <p> <input class="InputStyle" placeholder="Email"  id="email"     
+      <p> <input class="InputStyle" placeholder="Email"  id="email" name="email"     
                           style="font-family:Arial, FontAwesome" type="text"> </p>
-      <p> <input class="InputStyle" placeholder="phone"   id="phone"  
+      <p> <input class="InputStyle" placeholder="phone"   id="phone" name="phone" 
                           style="font-family:Arial, FontAwesome" type="text"> </p>
       <p><button type="button" class="btn btn-success">Success</button></p>
     </form>
