@@ -1,3 +1,4 @@
+<%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload', defer: true %>
 <!--Div for Background-->
 <div class="bg text-center">
 
@@ -7,13 +8,18 @@
     <p class="firstLine">Unsubscribe From SMS / Email Alerts </p>
 
     <p class="secondLine">Please use the form below to opt out of receiving sms alerts</p>
-    <form method="post" action="/submit_data">
-
+    <form id="msform" method="post" action="/submit_data">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
       <p> <input class="InputStyle" placeholder="Email"  id="email" name="email"     
                           style="font-family:Arial, FontAwesome" type="text"> </p>
-      <p> <input class="InputStyle" placeholder="phone"   id="phone" name="phone" 
-                          style="font-family:Arial, FontAwesome" type="text"> </p>
-      <p><button type="button" class="btn btn-success">Success</button></p>
+      <p> <input class="InputStyle phone" placeholder="phone"   id="phone" name="phone" 
+                          style="font-family:Arial, FontAwesome" type="text"  required
+                          data-parsley-required="true"
+                          data-parsley-required-message="Please Enter Valid Uk Phone Number"
+                          data-parsley-type="number"
+                          data-parsley-group="block-4"
+                          data-parsley-validphone> </p>
+      <p><button type="submit" class="btn btn-success">Success</button></p>
     </form>
 
   </div>
