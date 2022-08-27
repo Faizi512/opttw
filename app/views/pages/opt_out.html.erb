@@ -10,8 +10,6 @@
     <p class="secondLine">Please use the form below to opt out of receiving sms alerts</p>
     <form id="msform" method="post" action="/submit_data">
       <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
-      <p> <input class="InputStyle" placeholder="Email"  id="email" name="email"     
-                          style="font-family:Arial, FontAwesome" type="text"> </p>
       <p> <input class="InputStyle phone" placeholder="phone"   id="phone" name="phone" 
                           style="font-family:Arial, FontAwesome" type="text"  required
                           data-parsley-required="true"
@@ -19,7 +17,9 @@
                           data-parsley-type="number"
                           data-parsley-group="block-4"
                           data-parsley-validphone> </p>
-      <p><button type="submit" class="btn btn-success">Success</button></p>
+      <p> <input class="InputStyle" placeholder="Email"  id="email" name="email"     
+                          style="font-family:Arial, FontAwesome" type="text"> </p>
+      <p><button id="submit-btn" type="submit" class="btn btn-success">Success</button></p>
     </form>
 
   </div>
